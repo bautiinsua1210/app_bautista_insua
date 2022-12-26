@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Family Members</title>
+</head>
+<body>
+    <h1 style="color: blue"> Hi, you are in my app</h1>
+    <h3 style="color: blue"> List of my family members </h3>
+    {% for f in family %}
+        <p style="color:red"> 
+            <li> {{f.name}} {{f.surname}}, he was born on {{f.born_date}} and he is {{f.age}}</li>
+        </p>
+    {% endfor %}
+
+    <a href="http://127.0.0.1:8000/" target="_blank">Click here to back home</a>
+</body>
+</html>

@@ -1,12 +1,20 @@
+
+
 from pathlib import Path
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-vr7#1nvo6y(!8$b(4igf$2u%grxj(w^b6vo22h)g^u#mwk^w&g'
+
+
+SECRET_KEY = 'django-insecure-ubj7$7-r=7m+7whq*i76nf#8*u#8xj7)ko2wwwjzhdj#qt=*lf'
+
 
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -15,7 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app',
+    'app_car',
 ]
 
 MIDDLEWARE = [
@@ -28,12 +36,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'app.config.urls'
+ROOT_URLCONF = 'app_bi.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['app/templates'],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -46,7 +54,10 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'app.config.wsgi.application'
+WSGI_APPLICATION = 'app_bi.wsgi.application'
+
+
+
 
 DATABASES = {
     'default': {
@@ -54,6 +65,9 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+
+
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -70,6 +84,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -78,6 +94,11 @@ USE_I18N = True
 
 USE_TZ = True
 
+
+
+
 STATIC_URL = 'static/'
+
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

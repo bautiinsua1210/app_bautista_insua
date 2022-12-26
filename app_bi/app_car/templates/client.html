@@ -1,0 +1,26 @@
+{% extends "templates\home.html" %}
+
+{% load static %}
+
+{% block titulo %}
+<h1 class="mb-5">Client's list</h1>
+{% endblock %}
+
+{% block contenido_que_cambia %}
+
+<ul>
+    <h1>Client's list</h1>
+
+    {% for client in clients %}
+    <li>{{ client.name }} {{ client.surname }} - {{ client.role }}</li>
+
+    <a class="btn btn-danger" href="{% url 'deleteClient'  client.id  %}">Delete </a>
+    <a class="btn btn-success" href="{% url 'editClient'  client.id  %}">Edit</a>
+    {% endfor %}
+
+
+</ul>
+
+<h2>{{ mensaje }}</h2>
+<a class="btn btn-primary" href="{% url 'clientForm'  %}">Add Client</a>
+{% endblock %}
